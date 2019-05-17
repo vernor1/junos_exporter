@@ -13,13 +13,13 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/czerwonk/junos_exporter/connector"
 	"github.com/pkg/errors"
+	"github.com/vernor1/junos_exporter/connector"
 
-	"github.com/czerwonk/junos_exporter/config"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/prometheus/common/log"
+	"github.com/vernor1/junos_exporter/config"
 )
 
 const version string = "0.9.1"
@@ -120,7 +120,7 @@ func initChannels() {
 func printVersion() {
 	fmt.Println("junos_exporter")
 	fmt.Printf("Version: %s\n", version)
-	fmt.Println("Author(s): Daniel Czerwonk")
+	fmt.Println("Author(s): Daniel vernor1")
 	fmt.Println("Metric exporter for switches and routers running JunOS")
 }
 
@@ -236,7 +236,7 @@ func startServer() {
 			<h1>JunOS Exporter</h1>
 			<p><a href="` + *metricsPath + `">Metrics</a></p>
 			<h2>More information:</h2>
-			<p><a href="https://github.com/czerwonk/junos_exporter">github.com/czerwonk/junos_exporter</a></p>
+			<p><a href="https://github.com/vernor1/junos_exporter">github.com/vernor1/junos_exporter</a></p>
 			</body>
 			</html>`))
 	})

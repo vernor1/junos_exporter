@@ -4,9 +4,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/czerwonk/junos_exporter/collector"
-	"github.com/czerwonk/junos_exporter/rpc"
 	"github.com/prometheus/client_golang/prometheus"
+	"github.com/vernor1/junos_exporter/collector"
+	"github.com/vernor1/junos_exporter/rpc"
 )
 
 const prefix string = "junos_storage_"

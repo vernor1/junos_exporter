@@ -1,18 +1,18 @@
 package firewall
 
 import (
-	"github.com/czerwonk/junos_exporter/collector"
-	"github.com/czerwonk/junos_exporter/rpc"
 	"github.com/prometheus/client_golang/prometheus"
+	"github.com/vernor1/junos_exporter/collector"
+	"github.com/vernor1/junos_exporter/rpc"
 )
 
 const prefix string = "junos_firewall_filter_"
 
 var (
-	counterPackets       *prometheus.Desc
-	counterBytes         *prometheus.Desc
-	policerPackets       *prometheus.Desc
-	policerBytes         *prometheus.Desc
+	counterPackets *prometheus.Desc
+	counterBytes   *prometheus.Desc
+	policerPackets *prometheus.Desc
+	policerBytes   *prometheus.Desc
 )
 
 func init() {
@@ -20,7 +20,7 @@ func init() {
 
 	counterPackets = prometheus.NewDesc(prefix+"counter_packets", "Number of packets matching counter in firewall filter", l, nil)
 	counterBytes = prometheus.NewDesc(prefix+"counter_bytes", "Number of bytes matching counter in firewall filter", l, nil)
-  policerPackets = prometheus.NewDesc(prefix+"policer_packets", "Number of packets matching policer in firewall filter", l, nil)
+	policerPackets = prometheus.NewDesc(prefix+"policer_packets", "Number of packets matching policer in firewall filter", l, nil)
 	policerBytes = prometheus.NewDesc(prefix+"policer_bytes", "Number of bytes matching policer in firewall filter", l, nil)
 }
 

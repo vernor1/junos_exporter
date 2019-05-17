@@ -3,10 +3,10 @@ package interfacediagnostics
 import (
 	"strconv"
 
-	"github.com/czerwonk/junos_exporter/rpc"
+	"github.com/vernor1/junos_exporter/rpc"
 
-	"github.com/czerwonk/junos_exporter/collector"
 	"github.com/prometheus/client_golang/prometheus"
+	"github.com/vernor1/junos_exporter/collector"
 )
 
 const prefix = "junos_interface_diagnostics_"

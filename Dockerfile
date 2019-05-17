@@ -1,4 +1,6 @@
 FROM golang as builder
+ENV CGO_ENABLED=0
+ENV GO111MODULE=on
 RUN go get -d -v github.com/vernor1/junos_exporter@develop
 WORKDIR /go/src/github.com/vernor1/junos_exporter
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .

@@ -1,8 +1,8 @@
 package collector
 
 import (
-	"github.com/czerwonk/junos_exporter/rpc"
 	"github.com/prometheus/client_golang/prometheus"
+	"github.com/vernor1/junos_exporter/rpc"
 )
 
 // RPCCollector collects metrics from JunOS using rpc.Client
