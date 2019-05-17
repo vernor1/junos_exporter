@@ -175,6 +175,7 @@ func loadConfigFromFlags() *config.Config {
 	f.Firewall = *firewallEnabled
 	f.Interfaces = *interfacesEnabled
 	f.InterfaceDiagnostic = *interfaceDiagnosticsEnabled
+	log.Infoln("InterfaceDiagnostic", f.InterfaceDiagnostic)
 	f.ISIS = *isisEnabled
 	f.NAT = *natEnabled
 	f.OSPF = *ospfEnabled
@@ -227,7 +228,7 @@ func connectionManagerWithPublicKey(opts []connector.Option) (*connector.SSHConn
 }
 
 func startServer() {
-	log.Infof("Starting JunOS exporter (Version: %s)\n", version)
+	log.Infof("Starting JunOS exporter (Version: %s_YM)\n", version)
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte(`<html>
 			<head><title>JunOS Exporter (Version ` + version + `)</title></head>

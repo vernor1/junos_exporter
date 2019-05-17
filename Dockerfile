@@ -1,6 +1,6 @@
 FROM golang as builder
-RUN go get -d -v github.com/czerwonk/junos_exporter
-WORKDIR /go/src/github.com/czerwonk/junos_exporter
+RUN go get -d -v github.com/vernor1/junos_exporter@develop
+WORKDIR /go/src/github.com/vernor1/junos_exporter
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
 
 FROM alpine

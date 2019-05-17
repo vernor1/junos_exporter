@@ -101,6 +101,7 @@ func collectors() map[string]collector.RPCCollector {
 		m["firewall"] = firewall.NewCollector()
 	}
 
+	log.Infoln("InterfaceDiagnostic", f.InterfaceDiagnostic)
 	if f.InterfaceDiagnostic {
 		m["interface-diagnostics"] = interfacediagnostics.NewCollector()
 	}
