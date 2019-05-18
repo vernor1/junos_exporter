@@ -174,8 +174,9 @@ func loadConfigFromFlags() *config.Config {
 	f.Environment = *environmentEnabled
 	f.Firewall = *firewallEnabled
 	f.Interfaces = *interfacesEnabled
+	log.Infoln("[YM] Interfaces", f.Interfaces)
 	f.InterfaceDiagnostic = *interfaceDiagnosticsEnabled
-	log.Infoln("InterfaceDiagnostic", f.InterfaceDiagnostic)
+	log.Infoln("[YM] InterfaceDiagnostic", f.InterfaceDiagnostic)
 	f.ISIS = *isisEnabled
 	f.NAT = *natEnabled
 	f.OSPF = *ospfEnabled

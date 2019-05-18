@@ -57,8 +57,10 @@ func collectors() map[string]collector.RPCCollector {
 
 	f := &cfg.Features
 
+	log.Infoln("[YM] Interfaces", f.Interfaces)
 	if f.Interfaces {
 		m["interfaces"] = interfaces.NewCollector()
+		log.Infoln("[YM] Created Interfaces collector", f.Interfaces)
 	}
 
 	if f.Routes {
@@ -101,9 +103,10 @@ func collectors() map[string]collector.RPCCollector {
 		m["firewall"] = firewall.NewCollector()
 	}
 
-	log.Infoln("InterfaceDiagnostic", f.InterfaceDiagnostic)
+	log.Infoln("[YM] InterfaceDiagnostic", f.InterfaceDiagnostic)
 	if f.InterfaceDiagnostic {
 		m["interface-diagnostics"] = interfacediagnostics.NewCollector()
+		log.Infoln("[YM] Created InterfaceDiagnostic collector", f.Interfaces)
 	}
 
 	if f.Storage {
